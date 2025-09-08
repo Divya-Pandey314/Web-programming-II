@@ -1,0 +1,28 @@
+package com.example.service;
+
+import com.example.model.Signup;
+import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+@Service
+public class SignupServiceImpl implements SignupService {
+
+    private static final Logger logger = LoggerFactory.getLogger(SignupServiceImpl.class);
+    @Override
+    public Signup registerUser(Signup user) {
+        logger.info("Registering new user: {}", user.getFullName());
+        
+        logger.info("User registered successfully: {}", user);
+
+        return user;
+    }
+    @Override
+    public Signup getUserByEmail(String email) {
+        logger.info("Fetching user by email: {}", email);
+        
+        logger.warn("User with email {} not found", email);
+        return null;
+    }
+}
+
+
