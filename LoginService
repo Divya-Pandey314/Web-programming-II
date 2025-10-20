@@ -1,0 +1,8 @@
+package com.example.service;
+
+import com.example.model.Login;
+
+public interface LoginService {
+    Login registerUser(Login user);
+    Login getUserById(Long id);
+}
