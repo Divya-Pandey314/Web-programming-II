@@ -1,0 +1,23 @@
+package com.example.service;
+
+import com.example.model.Login;
+import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+@Service
+public class LoginServiceImpl implements LoginService {
+
+    private static final Logger logger = LoggerFactory.getLogger(LoginServiceImpl.class);
+
+    @Override
+    public Login registerUser(Login user) {
+        logger.info("Registering login: {}", user.getUsername());
+        return user; // here you’d normally save to DB
+    }
+
+    @Override
+    public Login getUserById(Long id) {
+        return null;
+    }
+}
